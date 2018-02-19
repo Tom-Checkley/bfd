@@ -1,4 +1,8 @@
 // TYPOGRAPHY
+//////////////////////////////////////////////
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:700|Roboto:300');
+
 $FontSize-XXXS:		8px;
 $FontSize-XXS:		10px;
 $FontSize-XS:			12px;
@@ -11,4 +15,23 @@ $FontSize-XXXL:		36px;
 
 $Type-LineHeight:	1.5;
 
-$FontFamily-Sans:	'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$FontFamily-Sans:	'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+$FontFamily-Head:	'Raleway', $FontFamily-Sans;
+$FontFamily-Main:	'Roboto', $FontFamily-Sans;
+
+
+$FontWeight-Bold: 700;
+$FontWeight-Thin: 300;
+
+
+
+// Breakpoints
+///////////////////////////////////////
+
+$BP-Smallest:		340px;
+$BP-Small:			480px;
+$BP-Med:				670px;
+$BP-Large:			1024px;
+$BP-Larger:			1400px;
+$BP-Largest:		1700px;

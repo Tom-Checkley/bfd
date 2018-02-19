@@ -1,0 +1,57 @@
+// BASE STYLES
+////////////////////////////
+
+// Variables
+////////////////////////////
+
+$Body-FontSize:			$FontSize-L;
+$Body-FontFamily:		$FontFamily-Main;
+$Body-LineHeight:		$Type-LineHeight;
+
+$Heading-Font:			$FontFamily-Head;
+$Heading-Weight:		$FontWeight-Bold;
+
+
+// Main
+////////////////////////////
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $Body-FontFamily;
+	font-weight: $FontWeight-Thin;
+	font-size: $Body-FontSize;
+	line-height: $Body-LineHeight;
+	box-sizing: border-box;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-position: inside;
+}
+
+a {
+	color: inherit;
+}
+
+i {
+	font-style: normal;
+}
+
+button {
+	appearance: none;
+	border: none;
+	background-color: transparent;
+}
+
+img {
+	max-width: 100%;
+}
+
+// Set heading font and weight
+@for $i from 1 through 6 {
+	h#{$i} {
+		font-family: $Heading-Font;
+		font-weight: $Heading-Weight;
+	}
+}
