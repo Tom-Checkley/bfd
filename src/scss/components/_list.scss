@@ -1,0 +1,40 @@
+// LISTS
+///////////////////////////
+
+// Variables
+///////////////////////////
+
+
+// Main
+///////////////////////////
+
+.list {}
+
+// Variants
+///////////////////////////
+
+.list--nav {
+	list-style: none;
+}
+
+.list--horizontal {
+	@include flex(column, space-around, center);
+	.list__item {
+		display: inline-block;
+		// float: left;
+	}
+}
+
+
+
+// Media Queries
+///////////////////////////
+
+@include media ($BP-Med) {
+	.list--horizontal {
+		@include flex(row, space-around, center);
+		.list__item {
+			display: inline-block;
+		}
+	}
+}

@@ -1,7 +1,10 @@
 // TYPOGRAPHY
 //////////////////////////////////////////////
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:700|Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Raleway:700|Roboto:300,400,700');
+
+$Font-Headings:		'Raleway';
+$Font-Main:				'Roboto';
 
 $FontSize-XXXS:		8px;
 $FontSize-XXS:		10px;
@@ -17,11 +20,12 @@ $Type-LineHeight:	1.5;
 
 $FontFamily-Sans:	'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
-$FontFamily-Head:	'Raleway', $FontFamily-Sans;
-$FontFamily-Main:	'Roboto', $FontFamily-Sans;
+$FontFamily-Head:	$Font-Headings, $FontFamily-Sans;
+$FontFamily-Main:	$Font-Main, $FontFamily-Sans;
 
 
 $FontWeight-Bold: 700;
+$FontWeight-Reg: 	400;
 $FontWeight-Thin: 300;
 
 
@@ -35,3 +39,9 @@ $BP-Med:				670px;
 $BP-Large:			1024px;
 $BP-Larger:			1400px;
 $BP-Largest:		1700px;
+
+
+// Images
+///////////////////////////////////////
+
+$imgPath:				'./assets/img/';

@@ -7,6 +7,7 @@
 $Body-FontSize:			$FontSize-L;
 $Body-FontFamily:		$FontFamily-Main;
 $Body-LineHeight:		$Type-LineHeight;
+$Body-FontWeight:		$FontWeight-Thin;
 
 $Heading-Font:			$FontFamily-Head;
 $Heading-Weight:		$FontWeight-Bold;
@@ -17,11 +18,11 @@ $Heading-Weight:		$FontWeight-Bold;
 body {
 	margin: 0;
 	padding: 0;
-	font-family: $Body-FontFamily;
-	font-weight: $FontWeight-Thin;
-	font-size: $Body-FontSize;
-	line-height: $Body-LineHeight;
-	box-sizing: border-box;
+	font-family: 	$Body-FontFamily;
+	font-weight: 	$Body-FontWeight;
+	font-size:		$Body-FontSize;
+	line-height: 	$Body-LineHeight;
+	box-sizing: 	border-box;
 }
 
 ul {
