@@ -5,6 +5,7 @@
 ///////////////////////////
 
 $Page-MinHeight:		100vh;
+$Page-SVG-Color:		rgba($COLOR-Primary, $Opacity);
 
 
 // Main
@@ -12,6 +13,9 @@ $Page-MinHeight:		100vh;
 
 .page {
 	min-height: $Page-MinHeight;
+	position: relative;
+	height: 100%;
+	width: 100%;
 }
 
 // Variants

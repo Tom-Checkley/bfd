@@ -1,0 +1,6 @@
+@mixin svg-bg($bgColor, $points) {
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0, 0, 100, 100"><polygon points="#{$points}" style="fill: #{$bgColor}"></polygon></svg>');
+	background: center center no-repeat;
+	background-size: 100% 100%;
+	background-color: transparent;
+}

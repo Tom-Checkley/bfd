@@ -8,6 +8,7 @@ $Body-FontSize:			$FontSize-L;
 $Body-FontFamily:		$FontFamily-Main;
 $Body-LineHeight:		$Type-LineHeight;
 $Body-FontWeight:		$FontWeight-Thin;
+$Body-Color:				$COLOR-White;
 
 $Heading-Font:			$FontFamily-Head;
 $Heading-Weight:		$FontWeight-Bold;
@@ -15,6 +16,12 @@ $Heading-Weight:		$FontWeight-Bold;
 
 // Main
 ////////////////////////////
+
+html {
+	width:				100%;
+	height:				100%;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -23,6 +30,9 @@ body {
 	font-size:		$Body-FontSize;
 	line-height: 	$Body-LineHeight;
 	box-sizing: 	border-box;
+	color:				$Body-Color;
+	width:				100%;
+	height:				100%;
 }
 
 ul {
