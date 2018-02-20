@@ -1,15 +1,21 @@
-		
-$Skewed-Lg-Points: 0,0 70,0  50,100 0,100;
+$Skewed-Width:			50;		
+$Skewed-Lg-Points: 0,0 #{$Skewed-Width + 20},0  $Skewed-Width,100 0,100;
 
 .skewed-bg {
+	overflow: hidden;
+	// position: relative;
+	min-height: 100%;
+	width: 100%;
 	&:after {
 		@include svg-bg($Page-SVG-Color, $Skewed-Lg-Points);
-		content: '';
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 10;
-		top: 0;
-		left: 0;
 	}
+}
+.skewed-bg__content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 100%;
+	width: #{$Skewed-Width * 1%};
+	z-index: 20;
+	padding: 1px;
 }

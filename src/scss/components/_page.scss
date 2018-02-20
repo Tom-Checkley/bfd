@@ -12,10 +12,8 @@ $Page-SVG-Color:		rgba($COLOR-Primary, $Opacity);
 ///////////////////////////
 
 .page {
-	min-height: $Page-MinHeight;
+	height: $Page-MinHeight;
 	position: relative;
-	height: 100%;
-	width: 100%;
 }
 
 // Variants
