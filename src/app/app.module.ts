@@ -9,18 +9,21 @@ import { HomeComponent } from './public/components/home/home.component';
 import { ServicesComponent } from './public/components/services/services.component';
 import { NotFoundComponent } from './public/components/not-found/not-found.component';
 
+import { AdminModule } from './admin/admin.module';
+
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    AdminModule,
+    AppRoutingModule
+  ],
   declarations: [
     AppComponent,
     MainNavComponent,
     HomeComponent,
     ServicesComponent,
     NotFoundComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
