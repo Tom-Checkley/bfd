@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserService } from './services/user.service';
 
 import { AdminComponent } from './components/admin/admin.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdminMenuComponent } from './components/admin-menu/admin-menu.component';
 
@@ -14,7 +14,7 @@ const AdminRoutes: Routes = [
     component: AdminComponent,
     children: [
       { path: 'login', component: LoginComponent },
-      { path: 'signup', component: SignUpComponent },
+      { path: 'register', component: RegisterComponent },
       { path: '', component: AdminMenuComponent }
     ]
   }

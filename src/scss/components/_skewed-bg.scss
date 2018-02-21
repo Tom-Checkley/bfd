@@ -2,12 +2,12 @@ $Skewed-Width:			50;
 $Skewed-Lg-Points: 0,0 #{$Skewed-Width + 20},0  $Skewed-Width,100 0,100;
 
 .skewed-bg {
-	overflow: hidden;
-	// position: relative;
+	// overflow: hidden;
+	position: relative;
 	min-height: 100%;
 	width: 100%;
 	&:after {
-		@include svg-bg($Page-SVG-Color, $Skewed-Lg-Points);
+		content: '<div class="skewed-bg__cover"></div>';
 	}
 }
 .skewed-bg__content {
