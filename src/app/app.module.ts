@@ -10,6 +10,7 @@ import { ServicesComponent } from './public/components/services/services.compone
 import { NotFoundComponent } from './public/components/not-found/not-found.component';
 
 import { AdminModule } from './admin/admin.module';
+import { FooterComponent } from './public/components/footer/footer.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AdminModule } from './admin/admin.module';
     MainNavComponent,
     HomeComponent,
     ServicesComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FooterComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

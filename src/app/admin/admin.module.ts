@@ -7,6 +7,8 @@ import { AdminComponent } from './components/admin/admin.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
+import { UserService } from './services/user.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,6 +19,9 @@ import { RegisterComponent } from './components/register/register.component';
     AdminComponent,
     LoginComponent,
     RegisterComponent
+  ],
+  providers: [
+    UserService
   ]
 })
 export class AdminModule { }
