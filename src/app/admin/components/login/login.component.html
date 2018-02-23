@@ -1,15 +1,19 @@
 <main class="page page--login">
+  <h1 class="page__title">Login</h1>
   <form class="form form--login">
     <div class="form__row">
       <label for="email" class="form__label">Email</label>
-      <input type="email" name="email" id="email" placeholder="Email" />
+      <input type="email" name="email" id="email" placeholder="Email" [(ngModel)]="email" required #em="ngModel" />
+      <p [hidden]="em.valid || em.pristine" class="form__error">Email is required</p>
     </div>
     <div class="form__row">
       <label for="password" class="form__label">Password</label>
-      <input type="password" name="password" id="password" placeholder="Password">
+      <input type="password" name="password" id="password" placeholder="Password" [(ngModel)]="password" required #pw="ngModel" />
+      <p [hidden]="pw.valid || pw.pristine" class="form__error">Password is required</p>
     </div>
     <div class="form__row form__actions">
-      <input class="button button--success" type="submit" value="Login">
+      <input class="button button--success" type="submit" value="Login" (click)="login()">
+      <input class="button button--success" type="submit" value="Register" (click)="signUp()">
       <a class="button button--warn" [routerLink]="['/']">Home</a>
     </div>
   </form>
