@@ -66,8 +66,17 @@ export class UserService implements CanActivate {
   login(loginEmail: string, loginPassword: string) {
     firebase.auth().signInWithEmailAndPassword(loginEmail, loginPassword)
       .catch((err) => {
-        this.msg = `<p>Unable to login</p><p>${err.message}</p><p>Please try again.</p>`;
+        this.msg = `<p>Unable to login.</p><p>${err.message}</p><p>Please try again.</p>`;
       });
+  }
+
+  logout() {
+    this.userLoggedIn = false;
+    firebase.auth().signOut().then(() => {
+      this.msg = `<p>Logged out</p>`;
+    }, (err) => {
+      this.msg = `<p>Unable to logout</p><p>${err.message}</p><p>Please try again</p>`;
+    });
   }
 
 }
