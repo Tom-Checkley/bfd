@@ -3,24 +3,29 @@
       <h1 class="page__title">Admin Registration</h1>
       <p>Please note, only approved email addresses will be able to register</p>
       <form class="form">
-        <div class="form__row">
+        <!-- <div class="form__row">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Name">
-        </div>
+            <input type="text" name="name" id="name" placeholder="Name" [(ngModel)]="name" required #nm="ngModel" >
+            <p class="form__error" [hidden]="nm.valid || nm.pristine">Name is required</p>
+        </div> -->
         <div class="form__row">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="email" name="email" id="email" placeholder="Email" [(ngModel)]="email" required #em="ngModel" >
+            <p class="form__error" [hidden]="em.valid || em.pristine">Email is required</p>
         </div>
         <div class="form__row">
             <label for="password">Password</label>
-            <input type="password" password="password" id="password" placeholder="Password">
+            <input type="password" name="password" id="password" placeholder="Password" [(ngModel)]="password1" required #pw1="ngModel" >
+            <p class="form__error" [hidden]="pw1.valid || pw1.pristine">Password is required</p>
         </div>
         <div class="form__row">
             <label for="confirm">Confirm Password</label>
-            <input type="password" password="confirm" id="confirm" placeholder="Confirm Password">
+            <input type="password" name="confirm" id="confirm" placeholder="Confirm Password" [(ngModel)]="password2" required #pw2="ngModel" >
+            <p class="form__error" [hidden]="pw2.valid || pw2.pristine">Confirm password is required</p>
         </div>
+        <p class="form__error" *ngIf="passwordFail">Passwords do not match</p>
         <div class="form__row">
-          <input type="submit" value="Register">
+          <input class="button button--success" type="submit" (click)="signUp()" value="Register">
         </div>
       </form>
   </div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminMenuComponent } from './components/admin-menu/admin-menu.component';
@@ -12,7 +13,8 @@ import { UserService } from './services/user.service';
 @NgModule({
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FormsModule
   ],
   declarations: [
     AdminMenuComponent,
