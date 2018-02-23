@@ -8,7 +8,7 @@
     </div>
     <div class="form__row">
       <label for="password" class="form__label">Password</label>
-      <input type="password" name="password" id="password" placeholder="Password" [(ngModel)]="password" required #pw="ngModel" />
+      <input type="password" name="password1" id="password" placeholder="Password" [(ngModel)]="password1" required #pw="ngModel" />
       <p [hidden]="pw.valid || pw.pristine" class="form__error">Password is required</p>
     </div>
     <div class="form__row form__actions">
