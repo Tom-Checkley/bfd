@@ -1,0 +1,6 @@
+// FONT-SIZE
+
+@mixin font-size($size) {
+	font-size: #{$size}px;
+	font-size: em($size);
+}

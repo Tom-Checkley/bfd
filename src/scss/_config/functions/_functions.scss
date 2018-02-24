@@ -3,6 +3,19 @@
 
 // TODO - SPLIT OUT IF THIS STARTS BECOMING UNWEILDLY
 
+// STRIP UNIT
+@function strip-unit($value, $unit) {
+	@if(unitless($value)) {
+		@return $value;
+	}
+	@else if($unit == 'all') {
+		@return $value / ($value * 0 + 1);
+	}
+	@else if(unit($value) == $unit) {
+		@return $value / 1#{$unit};
+	}
+}
+
 // TO EM
 @function em($px, $context: $FontSize) {
 	@if(unitless($px)) {

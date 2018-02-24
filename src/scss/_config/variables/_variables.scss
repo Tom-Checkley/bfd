@@ -20,7 +20,7 @@ $LineHeight:			1.5;
 
 $Base-FontSize:		$FontSize-L;
 
-$Type-LineHeight:	$Base-FontSize * $LineHeight;
+$Type-LineHeight:	em($Base-FontSize * $LineHeight);
 
 $FontFamily-Sans:	'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 

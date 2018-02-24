@@ -27,7 +27,7 @@ body {
 	padding: 0;
 	font-family: 	$Body-FontFamily;
 	font-weight: 	$Body-FontWeight;
-	font-size:		$Body-FontSize;
+	@include font-size($Body-FontSize);
 	line-height: 	$Body-LineHeight;
 	box-sizing: 	border-box;
 	// color:				$Body-Color;
