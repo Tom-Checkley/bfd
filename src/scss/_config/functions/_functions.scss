@@ -14,6 +14,9 @@
 	@else if(unit($value) == $unit) {
 		@return $value / 1#{$unit};
 	}
+	@else {
+		@return $value;
+	}
 }
 
 // TO EM

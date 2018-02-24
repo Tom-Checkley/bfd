@@ -23,11 +23,11 @@ $FORM-Spacing:				$Type-LineHeight / 2;
 ///////////////////////////
 
 .form__row {
-	@include padding-y($FORM-Spacing / 2);
+	@include padding-y($FORM-Spacing);
 }
 
 .form__input {
-	@include padding($FORM-Spacing);
+	@include padding($FORM-Spacing / 2);
 	width: 100%;
 }
 

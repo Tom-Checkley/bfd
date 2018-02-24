@@ -16,6 +16,9 @@ $Heading-Weight:		$FontWeight-Bold;
 
 // Main
 ////////////////////////////
+* {
+	box-sizing: border-box;
+}
 
 html {
 	width:				100%;
@@ -28,7 +31,6 @@ body {
 	font-family: 	$Body-FontFamily;
 	font-weight: 	$Body-FontWeight;
 	@include font-size($Body-FontSize);
-	line-height: 	$Body-LineHeight;
 	box-sizing: 	border-box;
 	// color:				$Body-Color;
 	width:				100%;
@@ -65,4 +67,10 @@ img {
 		font-family: $Heading-Font;
 		font-weight: $Heading-Weight;
 	}
+}
+
+input {
+	box-shadow: none;
+	border: $BORDER;
+	border-radius: $BORDER-Radius;
 }

@@ -20,7 +20,7 @@ $LineHeight:			1.5;
 
 $Base-FontSize:		$FontSize-L;
 
-$Type-LineHeight:	em($Base-FontSize * $LineHeight);
+$Type-LineHeight:	$Base-FontSize * $LineHeight;
 
 $FontFamily-Sans:	'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
@@ -60,3 +60,9 @@ $COLOR-Secondary:	#ff9800;
 $COLOR-White:			#ffffff;
 
 $Opacity:					0.8;
+
+// Borders
+///////////////////////////////////////
+
+$BORDER:					$COLOR-Primary 1px solid;
+$BORDER-Radius:		em($Base-FontSize /  4);
