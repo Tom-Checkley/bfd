@@ -104,7 +104,7 @@
 // MARGIN-Y
 /////////////////////////////////////////
 
-@mixin margin-x($t, $b: null) {
+@mixin margin-y($t, $b: null) {
 	@if(not $b) {
 		@if(unitless($t)) {
 			margin-top: $t;

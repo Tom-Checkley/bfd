@@ -3,12 +3,12 @@
   <form class="form form--login">
     <div class="form__row">
       <label for="email" class="form__label">Email</label>
-      <input type="email" name="email" id="email" placeholder="Email" [(ngModel)]="email" required #em="ngModel" />
+      <input class="form__input" type="email" name="email" id="email" placeholder="Email" [(ngModel)]="email" required #em="ngModel" />
       <p [hidden]="em.valid || em.pristine" class="form__error">Email is required</p>
     </div>
     <div class="form__row">
       <label for="password" class="form__label">Password</label>
-      <input type="password" name="password1" id="password" placeholder="Password" [(ngModel)]="password1" required #pw="ngModel" />
+      <input class="form__input" type="password" name="password1" id="password" placeholder="Password" [(ngModel)]="password1" required #pw="ngModel" />
       <p [hidden]="pw.valid || pw.pristine" class="form__error">Password is required</p>
     </div>
     <div class="form__row form__actions">

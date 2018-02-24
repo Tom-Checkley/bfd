@@ -6,17 +6,21 @@
 $Font-Headings:		'Raleway';
 $Font-Main:				'Roboto';
 
-$FontSize-XXXS:		8px;
-$FontSize-XXS:		10px;
-$FontSize-XS:			12px;
-$FontSize-S:			14px;
-$FontSize:				16px;
-$FontSize-L: 			18px;
-$FontSize-XL: 		20px;
-$FontSize-XXL: 		24px;
-$FontSize-XXXL:		36px;
+$FontSize-XXXS:		8;
+$FontSize-XXS:		10;
+$FontSize-XS:			12;
+$FontSize-S:			14;
+$FontSize:				16;
+$FontSize-L: 			18;
+$FontSize-XL: 		20;
+$FontSize-XXL: 		24;
+$FontSize-XXXL:		36;
 
-$Type-LineHeight:	1.5;
+$LineHeight:			1.5;
+
+$Base-FontSize:		$FontSize-L;
+
+$Type-LineHeight:	$Base-FontSize * $LineHeight;
 
 $FontFamily-Sans:	'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 

@@ -78,9 +78,9 @@
 @mixin padding-x($l, $r: null) {
 	@if(not $r) {
 		@if(unitless($l)) {
-			padding-left: $l;
+			padding-left: #{$l}px;
 			padding-left: em($l);
-			padding-right: $l;
+			padding-right: #{$l}px;
 			padding-right: em($l);
 		}
 		@else {
@@ -104,12 +104,12 @@
 // PADDING-Y
 /////////////////////////////////////////
 
-@mixin padding-x($t, $b: null) {
+@mixin padding-y($t, $b: null) {
 	@if(not $b) {
 		@if(unitless($t)) {
-			padding-top: $t;
+			padding-top: #{$t}px;
 			padding-top: em($t);
-			padding-bottom: $t;
+			padding-bottom: #{$t}px;
 			padding-bottom: em($t);
 		}
 		@else {
