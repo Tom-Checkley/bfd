@@ -73,4 +73,11 @@ input {
 	box-shadow: none;
 	border: $BORDER;
 	border-radius: $BORDER-Radius;
+	font-family: $FontFamily-Main;
+	font-weight: $Body-FontWeight;
+}
+
+:focus {
+	outline: 1px dotted $COLOR-Primary;
+	outline-offset: 1px;
 }
