@@ -1,0 +1,15 @@
+// FUNCTIONS
+///////////////////////////
+
+// TODO - SPLIT OUT IF THIS STARTS BECOMING UNWEILDLY
+
+// TO EM
+@function em($px, $context: $FontSize) {
+	@if(unitless($px)) {
+		$px: $px * 1px;
+	}
+	@if(unitless($context)) {
+		$context: $context * 1px;
+	}
+	@return $px / $context * 1em;
+}

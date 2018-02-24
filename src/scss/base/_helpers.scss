@@ -1,0 +1,12 @@
+// HELPER CLASSES
+// 
+// Brought in high so can be over ruled if necessary
+
+.visually-hidden {
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	opacity: 0;
+	z-index: -1;
+	position: absolute;
+}

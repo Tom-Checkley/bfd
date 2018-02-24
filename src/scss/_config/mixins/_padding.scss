@@ -1,0 +1,130 @@
+// PADDING MIXINS
+
+// TODO- CURRENTLY ACCEPTS UNITS INCLUDING PX, IF UNIT IS PX IT WILL NOT BE CONVERTED TO EM, SHOULD CREATE A FUNCTION TO STRIP UNITS UNLESS %
+
+
+// PADDING SHORTHAND
+/////////////////////////////////////////
+
+@mixin padding($t, $r: null, $b: null, $l: null) {
+	@if not ($r) {
+		@if(unitless($t)) {
+			padding: #{$t}px;
+			padding: em($t);
+		}
+	} 
+
+	@if($r and not $b) {
+		@if(unitless($t) and unitless($r)) {
+			padding: #{$t}px #{$r}px;
+			padding: em($t) em($r);
+		}
+		@else {
+			@if(unitless($t)) {
+				$t: em($t);
+			}
+			@if(unitless($r)) {
+				$r: em($r);
+			}
+			padding: $t $r;
+		}
+	}
+
+	@if($r and $b and not $l) {
+		@if(unitless($t) and unitless($r) and unitless($b)) {
+			padding: #{$t}px #{$r}px #{$b}px;
+			padding: em($t) em($r) em($b);
+		}
+		@else {
+			@if(unitless($t)) {
+				$t: em($t);
+			}
+			@if(unitless($r)) {
+				$r: em($r);
+			}
+			@if(unitless($b)) {
+				$b: em($b);
+			}
+			padding: $t $r $b;
+		}
+	}
+
+	@if($r and $b and $l) {
+		@if(unitless($t) and unitless($r) and unitless($b) and unitless($l)) {
+			padding: #{$t}px #{$r}px #{$b}px #{$l}px;
+			padding: em($t) em($r) em($b) em($l);
+		}
+		@else {
+			@if(unitless($t)) {
+				$t: em($t);
+			}
+			@if(unitless($r)) {
+				$r: em($r);
+			}
+			@if(unitless($b)) {
+				$b: em($b);
+			}
+			@if(unitless($l)) {
+				$l: em($l);
+			}
+			padding: $t $r $b $l;
+		}
+	}
+}
+
+// PADDING-X
+/////////////////////////////////////////
+
+@mixin padding-x($l, $r: null) {
+	@if(not $r) {
+		@if(unitless($l)) {
+			padding-left: $l;
+			padding-left: em($l);
+			padding-right: $l;
+			padding-right: em($l);
+		}
+		@else {
+			padding-left: $l;
+			padding-right: $l;
+		}
+	}
+	@if($l and $r) {
+		@if(unitless($l)) {
+			$l: em($l);
+		}
+		@if(unitless($r)) {
+			$r: em($r);
+		}
+		padding-left: $l;
+		padding-right: $r;
+	}
+}
+
+
+// PADDING-Y
+/////////////////////////////////////////
+
+@mixin padding-x($t, $b: null) {
+	@if(not $b) {
+		@if(unitless($t)) {
+			padding-top: $t;
+			padding-top: em($t);
+			padding-bottom: $t;
+			padding-bottom: em($t);
+		}
+		@else {
+			padding-top: $t;
+			padding-bottom: $t;
+		}
+	}
+	@if($t and $b) {
+		@if(unitless($t)) {
+			$t: em($t);
+		}
+		@if(unitless($b)) {
+			$b: em($b);
+		}
+		padding-top: $t;
+		padding-bottom: $b;
+	}
+}
