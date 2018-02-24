@@ -1,0 +1,130 @@
+// MARGIN MIXINS
+
+// TODO- CURRENTLY ACCEPTS UNITS INCLUDING PX, IF UNIT IS PX IT WILL NOT BE CONVERTED TO EM, SHOULD CREATE A FUNCTION TO STRIP UNITS UNLESS %
+
+
+// MARGIN SHORTHAND
+/////////////////////////////////////////
+
+@mixin margin($t, $r: null, $b: null, $l: null) {
+	@if not ($r) {
+		@if(unitless($t)) {
+			margin: #{$t}px;
+			margin: em($t);
+		}
+	} 
+
+	@if($r and not $b) {
+		@if(unitless($t) and unitless($r)) {
+			margin: #{$t}px #{$r}px;
+			margin: em($t) em($r);
+		}
+		@else {
+			@if(unitless($t)) {
+				$t: em($t);
+			}
+			@if(unitless($r)) {
+				$r: em($r);
+			}
+			margin: $t $r;
+		}
+	}
+
+	@if($r and $b and not $l) {
+		@if(unitless($t) and unitless($r) and unitless($b)) {
+			margin: #{$t}px #{$r}px #{$b}px;
+			margin: em($t) em($r) em($b);
+		}
+		@else {
+			@if(unitless($t)) {
+				$t: em($t);
+			}
+			@if(unitless($r)) {
+				$r: em($r);
+			}
+			@if(unitless($b)) {
+				$b: em($b);
+			}
+			margin: $t $r $b;
+		}
+	}
+
+	@if($r and $b and $l) {
+		@if(unitless($t) and unitless($r) and unitless($b) and unitless($l)) {
+			margin: #{$t}px #{$r}px #{$b}px #{$l}px;
+			margin: em($t) em($r) em($b) em($l);
+		}
+		@else {
+			@if(unitless($t)) {
+				$t: em($t);
+			}
+			@if(unitless($r)) {
+				$r: em($r);
+			}
+			@if(unitless($b)) {
+				$b: em($b);
+			}
+			@if(unitless($l)) {
+				$l: em($l);
+			}
+			margin: $t $r $b $l;
+		}
+	}
+}
+
+// MARGIN-X
+/////////////////////////////////////////
+
+@mixin margin-x($l, $r: null) {
+	@if(not $r) {
+		@if(unitless($l)) {
+			margin-left: $l;
+			margin-left: em($l);
+			margin-right: $l;
+			margin-right: em($l);
+		}
+		@else {
+			margin-left: $l;
+			margin-right: $l;
+		}
+	}
+	@if($l and $r) {
+		@if(unitless($l)) {
+			$l: em($l);
+		}
+		@if(unitless($r)) {
+			$r: em($r);
+		}
+		margin-left: $l;
+		margin-right: $r;
+	}
+}
+
+
+// MARGIN-Y
+/////////////////////////////////////////
+
+@mixin margin-x($t, $b: null) {
+	@if(not $b) {
+		@if(unitless($t)) {
+			margin-top: $t;
+			margin-top: em($t);
+			margin-bottom: $t;
+			margin-bottom: em($t);
+		}
+		@else {
+			margin-top: $t;
+			margin-bottom: $t;
+		}
+	}
+	@if($t and $b) {
+		@if(unitless($t)) {
+			$t: em($t);
+		}
+		@if(unitless($b)) {
+			$b: em($b);
+		}
+		margin-top: $t;
+		margin-bottom: $b;
+	}
+}
