@@ -1,3 +1,28 @@
-<p>
-  blog-admin works!
-</p>
+<nav class="nav nav--admin">
+  <ul class="nav__links list list--horizontal list--nav">
+    <li class="nav__item">
+      <a class="nav__link" (click)="chooseMode('add')">Add Post</a>
+    </li>
+    <!-- <li class="nav__link" class="nav__item">
+      <a (click)="chooseMode('Edit')">Edit Post</a>
+    </li> -->
+    <li class="nav__item">
+      <a class="nav__link" (click)="chooseMode('')">Manage Blogs</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" [routerLink]="['/admin']">Back to Admin</a>
+    </li>
+    <li *ngIf="theUser"  class="nav__item">
+      <a class="nav__link" (click)="logout()">Logout</a>
+    </li>
+  </ul>
+</nav>
+
+<div [ngSwitch]="menuChoice" >
+  <div *ngSwitch="'add'">
+    <h1 class="page__title">Add Menu</h1>
+  </div>
+  <div *ngSwitchDefault>
+    <h1 class="page__title">Default</h1>
+  </div>
+</div>

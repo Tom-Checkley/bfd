@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogAdminComponent } from './components/blog-admin/blog-admin.component';
+import { BlogAddComponent } from './components/blog-add/blog-add.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { BlogAdminComponent } from './components/blog-admin/blog-admin.component
     LoginComponent,
     RegisterComponent,
     BlogComponent,
-    BlogAdminComponent
+    BlogAdminComponent,
+    BlogAddComponent
   ],
   providers: [
     UserService,
