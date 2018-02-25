@@ -19,6 +19,16 @@
 	}
 }
 
+// PIXEL OR %
+@function pxOrPercent($value) {
+	@if unit($value) == '%' {
+		@return $value;
+	}
+	@else {
+		@return $value / ($value * 0 + 1);
+	}
+}
+
 // TO EM
 @function em($px, $context: $FontSize) {
 	@if(unitless($px)) {

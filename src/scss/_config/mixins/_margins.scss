@@ -1,20 +1,23 @@
 // MARGIN MIXINS
 
-// TODO- CURRENTLY ACCEPTS UNITS INCLUDING PX, IF UNIT IS PX IT WILL NOT BE CONVERTED TO EM, SHOULD CREATE A FUNCTION TO STRIP UNITS UNLESS %
-
-
 // MARGIN SHORTHAND
 /////////////////////////////////////////
 
 @mixin margin($t, $r: null, $b: null, $l: null) {
 	@if not ($r) {
+		$t: pxOrPercent($t);
 		@if(unitless($t)) {
 			margin: #{$t}px;
 			margin: em($t);
 		}
+		@else {
+			margin: $t;
+		}
 	} 
 
 	@if($r and not $b) {
+		$t: pxOrPercent($t);
+		$r: pxOrPercent($r);
 		@if(unitless($t) and unitless($r)) {
 			margin: #{$t}px #{$r}px;
 			margin: em($t) em($r);
@@ -31,6 +34,9 @@
 	}
 
 	@if($r and $b and not $l) {
+		$t: pxOrPercent($t);
+		$r: pxOrPercent($r);
+		$b: pxOrPercent($b);
 		@if(unitless($t) and unitless($r) and unitless($b)) {
 			margin: #{$t}px #{$r}px #{$b}px;
 			margin: em($t) em($r) em($b);
@@ -50,6 +56,10 @@
 	}
 
 	@if($r and $b and $l) {
+		$t: pxOrPercent($t);
+		$r: pxOrPercent($r);
+		$b: pxOrPercent($b);
+		$l: pxOrPercent($l);
 		@if(unitless($t) and unitless($r) and unitless($b) and unitless($l)) {
 			margin: #{$t}px #{$r}px #{$b}px #{$l}px;
 			margin: em($t) em($r) em($b) em($l);
@@ -77,10 +87,11 @@
 
 @mixin margin-x($l, $r: null) {
 	@if(not $r) {
+		$l: pxOrPercent($l);
 		@if(unitless($l)) {
-			margin-left: $l;
+			margin-left: #{$l}px;
 			margin-left: em($l);
-			margin-right: $l;
+			margin-right: #{$l}px;
 			margin-right: em($l);
 		}
 		@else {
@@ -89,6 +100,8 @@
 		}
 	}
 	@if($l and $r) {
+		$l: pxOrPercent($l);
+		$r: pxOrPercent($r);
 		@if(unitless($l)) {
 			$l: em($l);
 		}
@@ -106,10 +119,11 @@
 
 @mixin margin-y($t, $b: null) {
 	@if(not $b) {
+		$t: pxOrPercent($t);
 		@if(unitless($t)) {
-			margin-top: $t;
+			margin-top: #{$t}px;
 			margin-top: em($t);
-			margin-bottom: $t;
+			margin-bottom: #{$t}px;
 			margin-bottom: em($t);
 		}
 		@else {
@@ -118,6 +132,8 @@
 		}
 	}
 	@if($t and $b) {
+		$t: pxOrPercent($t);
+		$b: pxOrPercent($b);
 		@if(unitless($t)) {
 			$t: em($t);
 		}
