@@ -5,9 +5,9 @@ import { Blog } from '../../classes/blog';
 @Injectable()
 export class BlogAdminService {
 
-  createpost(post: Blog) {
+  createPost(post: Blog) {
     const storageRef = firebase.storage().ref();
-    storageRef.child(`~/assets/img/blogImg/${post.imgTitle}`).putString(post.img, 'base64')
+    storageRef.child(`blogImg/${post.imgTitle}`).putString(post.img, 'base64')
       .then((snapshot) => {
         const url = snapshot.metadata.downloadURLs[0];
         const dbRef = firebase.database().ref('blogPosts/');
@@ -22,6 +22,7 @@ export class BlogAdminService {
         });
       })
       .catch((err) => {
+        alert(`failed upload: ${err.message}`);
       });
   }
 

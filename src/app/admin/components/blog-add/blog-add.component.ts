@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { BlogAdminService } from '../../services/blog-admin.service';
 import { Blog } from '../../../classes/blog';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-blog-add',
@@ -25,7 +26,7 @@ export class BlogAddComponent {
     myFile.readAsDataURL(file);
 
     myFile.onload = (e: any) => {
-      this.imageSrc = e.target.tesult;
+      this.imageSrc = e.target.result;
     };
   }
 
@@ -37,7 +38,7 @@ export class BlogAddComponent {
       this.imgTitle,
       this.imageSrc.substring(23)
     );
-    this.blogAdminService.createpost(this.post);
+    this.blogAdminService.createPost(this.post);
 
     // Add flash message;
 

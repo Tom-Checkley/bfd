@@ -19,8 +19,8 @@
 </nav>
 
 <div [ngSwitch]="menuChoice" >
-  <div *ngSwitch="'add'">
-    <h1 class="page__title">Add Menu</h1>
+  <div *ngSwitchCase="'add'">
+    <app-blog-add></app-blog-add>
   </div>
   <div *ngSwitchDefault>
     <h1 class="page__title">Default</h1>
