@@ -55,11 +55,13 @@ $imgPath:				'./assets/img/';
 // Colors
 ///////////////////////////////////////
 
-$COLOR-Primary:		#242533;
-$COLOR-Secondary:	#ff9800;
-$COLOR-White:			#ffffff;
+$COLOR-Primary:			#242533;
+$COLOR-Secondary:		#ff9800;
+$COLOR-White:				#ffffff;
 
-$Opacity:					0.8;
+$Opacity:						0.8;
+
+$COLOR-BG-Opaque:		rgba($COLOR-Primary, $Opacity);
 
 // Borders
 ///////////////////////////////////////

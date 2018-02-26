@@ -5,7 +5,7 @@
 ///////////////////////////
 
 $Page-MinHeight:		100vh;
-$Page-SVG-Color:		rgba($COLOR-Primary, $Opacity);
+$Page-Padding:			$Type-LineHeight;
 
 
 // Main
@@ -17,6 +17,10 @@ $Page-SVG-Color:		rgba($COLOR-Primary, $Opacity);
 
 // Elements
 ///////////////////////////
+
+.page__content {
+	@include padding($Page-Padding);
+}
 
 // Variants
 ///////////////////////////
