@@ -23,6 +23,38 @@
     <app-blog-add></app-blog-add>
   </div>
   <div *ngSwitchDefault>
-    <h1 class="page__title">Default</h1>
+      <div *ngIf="formDisplay">
+          <div *ngFor="let post of blogPosts">
+
+            <img [src]="post.img" alt="post.imgTitle" class="mini-img" />
+            <h4>{{post.title}}</h4>
+            <p>{{post.content}}</p>
+            <a (click)="editPost(post)" class="button">Edit</a>
+            <a (click)="deletePost(post)" class="button alert">Delete</a>
+        
+          </div>
+        </div>
+    
+        <div *ngIf="!formDisplay">
+          <form class="form">
+            <div class="form__row">
+              <label for="title" class="form__label">Post Title</label>
+              <input type="text" name="title" id="title" [(ngModel)]="singlePost.title" required #pstTitle="ngModel">
+            </div>
+            <div class="form__row">
+              <label class="form__label" for="content">Post Content</label>
+              <textarea class="form__input" rows="12" name="content" id="content" [(ngModel)]="singlePost.content" required #pstContent="ngModel"></textarea>
+            </div>
+            <div class="form__row">
+              <img [src]="singlePost.img" alt="{{singlePost.imgTitle}}" />
+            </div>
+            <div class="form__row form__actions">
+              <button class="success button" (click)="updatePost(singlePost)" [disabled]="!pstTitle.valid ||!pstContent.valid" type="button">Update post</button>
+              <button class="cancel button" (click)="cancelEdit()" type="button">Cancel edit</button>
+            </div>
+          </form>
+        </div>
+    
+       
   </div>
 </div>
