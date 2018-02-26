@@ -26,4 +26,26 @@ export class BlogAdminService {
       });
   }
 
+  editPost(update: Blog) {
+    const dbRef = firebase.database().ref('blogPosts/').child(update.id)
+      .update({
+        title: update.title,
+        content: update.content,
+        location: update.location
+      });
+  }
+
+  deletePost(deletePost: Blog) {
+    const dbRef = firebase.database().ref('blogPosts/').child(deletePost.id).remove();
+    // add flash message
+    const imageRef = firebase.storage().ref().child(`blogImg/${deletePost.imgTitle}`)
+      .delete()
+        .then(() => {
+          alert('post deleted');
+        })
+        .catch((err) => {
+          alert(`error: ${err.message}`);
+        });
+  }
+
 }

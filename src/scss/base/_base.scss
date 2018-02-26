@@ -69,7 +69,8 @@ img {
 	}
 }
 
-input {
+input,
+textarea {
 	box-shadow: none;
 	border: $BORDER;
 	border-radius: $BORDER-Radius;
