@@ -30,12 +30,20 @@
 }
 
 // TO EM
-@function em($px, $context: $FontSize) {
-	@if(unitless($px)) {
-		$px: $px * 1px;
+@function em($val, $context: $Base-FontSize) {
+	@if is-numeber($val) and $val != 0 {
+		@if(unitless($val)) {
+			$val: $val * 1px;
+		}
+		@if(unitless($context)) {
+			$context: $context * 1px;
+		}
+		@return $val / $context * 1em;
 	}
-	@if(unitless($context)) {
-		$context: $context * 1px;
+	@else if ($val == 0 or $val == 'auto') {
+		@return $val;
 	}
-	@return $px / $context * 1em;
+	@else {
+		@error 'Value `#{$val}` not a number auto or 0 while converting to em';
+	}
 }
