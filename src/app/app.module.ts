@@ -11,6 +11,7 @@ import { NotFoundComponent } from './public/components/not-found/not-found.compo
 
 import { AdminModule } from './admin/admin.module';
 import { FooterComponent } from './public/components/footer/footer.component';
+import { BlogComponent } from './public/components/blog/blog.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FooterComponent } from './public/components/footer/footer.component';
     HomeComponent,
     ServicesComponent,
     NotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    BlogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
