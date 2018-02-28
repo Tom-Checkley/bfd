@@ -12,6 +12,7 @@ import { NotFoundComponent } from './public/components/not-found/not-found.compo
 import { AdminModule } from './admin/admin.module';
 import { FooterComponent } from './public/components/footer/footer.component';
 import { BlogComponent } from './public/components/blog/blog.component';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { BlogComponent } from './public/components/blog/blog.component';
     ServicesComponent,
     NotFoundComponent,
     FooterComponent,
-    BlogComponent
+    BlogComponent,
+    TruncatePipe
   ],
   providers: [],
   bootstrap: [AppComponent]
