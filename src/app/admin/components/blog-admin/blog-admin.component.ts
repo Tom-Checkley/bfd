@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import * as firebase from 'firebase';
 import { BlogAdminService } from '../../services/blog-admin.service';
 import { Blog } from '../../../classes/blog';
+import { TruncatePipe } from '../../../pipes/truncate.pipe';
 
 @Component({
   templateUrl: './blog-admin.component.html',

@@ -31,6 +31,9 @@ import { TruncatePipe } from './pipes/truncate.pipe';
     BlogComponent,
     TruncatePipe
   ],
+  exports: [
+    TruncatePipe
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

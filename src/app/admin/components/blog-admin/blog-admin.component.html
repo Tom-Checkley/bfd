@@ -28,7 +28,7 @@
 
             <img [src]="post.img" alt="post.imgTitle" class="mini-img" />
             <h4>{{post.title}}</h4>
-            <p>{{post.content}}</p>
+            <p>{{post.content | truncate:140}}</p>
             <a (click)="editPost(post)" class="button">Edit</a>
             <a (click)="deletePost(post)" class="button alert">Delete</a>
         

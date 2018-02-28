@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { UserService } from './services/user.service';
 import { BlogAdminService } from './services/blog-admin.service';
 
+import { TruncatePipe } from '../pipes/truncate.pipe';
+
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminMenuComponent } from './components/admin-menu/admin-menu.component';
 import { AdminComponent } from './components/admin/admin.component';
@@ -28,7 +30,7 @@ import { BlogAddComponent } from './components/blog-add/blog-add.component';
     RegisterComponent,
     BlogComponent,
     BlogAdminComponent,
-    BlogAddComponent
+    BlogAddComponent,
   ],
   providers: [
     UserService,
