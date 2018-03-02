@@ -13,6 +13,8 @@ export class BlogAddComponent {
   imgTitle: string;
   imageSrc: string;
   postTitle: string;
+  date: Date = new Date();
+  // dateNow = this.date.now();
   content: string;
   location: string;
   post: Blog;
@@ -36,6 +38,7 @@ export class BlogAddComponent {
       this.content,
       this.location,
       this.imgTitle,
+      this.date,
       this.imageSrc.substring(23)
     );
     this.blogAdminService.createPost(this.post);

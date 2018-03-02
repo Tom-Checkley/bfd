@@ -17,6 +17,7 @@ export class BlogAdminService {
           content: post.content,
           location: post.location,
           imgTitle: post.imgTitle,
+          date: post.date,
           img: url,
           id: newPost.key
         });

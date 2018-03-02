@@ -25,10 +25,11 @@
   <div *ngSwitchDefault>
       <div *ngIf="formDisplay">
           <div *ngFor="let post of blogPosts">
-
-            <img [src]="post.img" alt="post.imgTitle" class="mini-img" />
             <h4>{{post.title}}</h4>
-            <p>{{post.content | truncate:140}}</p>
+            <p><small>Posted: {{post.date | date}}</small></p>
+            <img [src]="post.img" alt="post.imgTitle" class="mini-img" />
+            
+            <p>{{post.content}}</p>
             <a (click)="editPost(post)" class="button">Edit</a>
             <a (click)="deletePost(post)" class="button alert">Delete</a>
         
