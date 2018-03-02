@@ -13,6 +13,7 @@ import { AdminModule } from './admin/admin.module';
 import { FooterComponent } from './public/components/footer/footer.component';
 import { BlogComponent } from './public/components/blog/blog.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
+import { TipsComponent } from './public/components/tips/tips.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { TruncatePipe } from './pipes/truncate.pipe';
     NotFoundComponent,
     FooterComponent,
     BlogComponent,
-    TruncatePipe
+    TruncatePipe,
+    TipsComponent
   ],
   exports: [
     TruncatePipe
