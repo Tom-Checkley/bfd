@@ -28,8 +28,9 @@ $SKEWED-BgColor:				$COLOR-BG-Opaque;
 // Elements
 ///////////////////////////
 
-.skewed__content {
+.skewed-bg__content {
 	width: 60%;
+	color: $COLOR-White;
 	@supports (clip-path: $SKEWED-Clip-Wide) {
 		width: 80%;	
 	}
@@ -47,7 +48,7 @@ $SKEWED-BgColor:				$COLOR-BG-Opaque;
 			@include clip-path($SKEWED-Clip-Narrow);
 		}
 	}
-	.skewed__content {
+	.skewed-bg__content {
 		width: 50%;
 	}
 }

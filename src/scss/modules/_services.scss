@@ -1,27 +1,26 @@
-// PAGE
+// Services
 ///////////////////////////
 
 // Variables
 ///////////////////////////
 
-$Page-MinHeight:		100vh;
-$Page-Padding:			$Type-LineHeight;
-
+$SERVICES-Bgs:		'clearance', 'cctv', 'repairs', 'installation', 'tanker';
 
 // Main
 ///////////////////////////
 
-.page {
-	height: $Page-MinHeight;
-	// display: flex;
-}
 
 // Elements
 ///////////////////////////
 
-.page__content {
-	@include padding($Page-Padding);
+.services__service {
+	@each $service in $SERVICES-Bgs {
+		&--#{$service} {
+			@include bg-img('#{$service}.jpg');
+		}
+	}
 }
+
 
 // Variants
 ///////////////////////////
