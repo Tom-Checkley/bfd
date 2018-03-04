@@ -14,6 +14,7 @@ import { BlogComponent } from './public/components/blog/blog.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
 import { TipsComponent } from './public/components/tips/tips.component';
 import { ProductsComponent } from './public/components/products/products.component';
+import { TestimonialsComponent } from './public/components/testimonials/testimonials.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ProductsComponent } from './public/components/products/products.compone
     BlogComponent,
     TruncatePipe,
     TipsComponent,
-    ProductsComponent
+    ProductsComponent,
+    TestimonialsComponent
   ],
   exports: [
     TruncatePipe

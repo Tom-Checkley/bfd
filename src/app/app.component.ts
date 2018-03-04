@@ -16,8 +16,8 @@ export class AppComponent implements OnInit {
     const $buoop = {notify: { e: 14, f: -4, o: -4, s: -2, c: -4} , insecure: true, unsupported: true, api: 5};
     function $buo_f() {
       const e = document.createElement('script');
-    e.src = '//browser-update.org/update.min.js';
-    document.body.appendChild(e);
+      e.src = '//browser-update.org/update.min.js';
+      document.body.appendChild(e);
     }
     try {
       document.addEventListener('DOMContentLoaded', $buo_f, false);

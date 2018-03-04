@@ -1,0 +1,58 @@
+<main class="page">
+  <section class="create-testimonial">
+    <h1>How did we do?</h1>
+    <form class="form form--testimonial">
+      <div class="form__row">
+        <label class="form__label" for="name">Name</label>
+        <input type="text" name="name" id="name" class="form__input" placeholder="name">
+      </div>
+      <div class="form__row">
+        <fieldset class="stars">
+          <legend class="visually-hidden">How many stars would you rate us</legend>
+          <div class="stars__star">
+            <input type="radio" name="stars" id="star1" value="1" class="stars">
+            <label for="star1">
+              <span class="visually-hidden">One</span>
+              <i class="icon icon--star-empty" role="img" aria-hidden="true"></i>
+            </label>
+          </div>
+          <div class="stars__star">
+            <input type="radio" name="stars" id="star2" value="2" class="stars">
+            <label for="star2">
+              <span class="visually-hidden">Two</span>
+              <i class="icon icon--star-empty" role="img" aria-hidden="true"></i>
+            </label>
+          </div>
+          <div class="stars__star">
+            <input type="radio" name="stars" id="star3" value="3" class="stars">
+            <label for="star3">
+              <span class="visually-hidden">Three</span>
+              <i class="icon icon--star-empty" role="img" aria-hidden="true"></i>
+            </label>
+          </div>
+          <div class="stars__star">
+            <input type="radio" name="stars" id="star4" value="4" class="stars">
+            <label for="star4">
+              <span class="visually-hidden">Four</span>
+              <i class="icon icon--star-empty" role="img" aria-hidden="true"></i>
+            </label>
+          </div>
+          <div class="stars__star">
+            <input type="radio" name="stars" id="star5" value="5" class="stars">
+            <label for="star5">
+              <span class="visually-hidden">Five</span>
+              <i class="icon icon--star-empty" role="img" aria-hidden="true"></i>
+            </label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form__row">
+        <label for="testimonialBody" class="visually-hidden">Please enter your review</label>
+        <textarea name="testimonialBody" id="testimonialBody" cols="30" rows="10" class="form__input" placeholder="Please enter your review"></textarea>
+      </div>
+      <div class="form__row">
+        <input type="submit" value="Submit" class="button">
+      </div>
+    </form>
+  </section>
+</main>

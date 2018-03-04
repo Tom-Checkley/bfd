@@ -5,6 +5,7 @@ import { HomeComponent } from './public/components/home/home.component';
 import { TipsComponent } from './public/components/tips/tips.component';
 import { BlogComponent } from './public/components/blog/blog.component';
 import { ProductsComponent } from './public/components/products/products.component';
+import { TestimonialsComponent } from './public/components/testimonials/testimonials.component';
 import { NotFoundComponent } from './public/components/not-found/not-found.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'tips', component: TipsComponent },
   { path: 'services', component: ProductsComponent },
   { path: 'blog', component: BlogComponent },
+  { path: 'testimonials', component: TestimonialsComponent},
   { path: '**', component: NotFoundComponent }
 ];
 
