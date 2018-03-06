@@ -31,6 +31,7 @@ export class BlogAddComponent {
   }
 
   createPost() {
+    console.log('createpost');
     this.post = new Blog (
       this.postTitle,
       this.content,
@@ -38,15 +39,17 @@ export class BlogAddComponent {
       this.imgTitle,
       this.imageSrc.substring(23)
     );
+    console.log(this.post);
     this.blogAdminService.createPost(this.post);
+    console.log(this.post);
 
     // Add flash message;
 
-    this.router.navigate(['/admin']);
+    this.router.navigate(['/blog-admin']);
   }
 
   cancel() {
-    this.router.navigate(['/admin']);
+    this.router.navigate(['/blog-admin']);
   }
 
 

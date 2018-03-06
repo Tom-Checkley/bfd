@@ -22,7 +22,7 @@ export class BlogAdminService {
         });
       })
       .catch((err) => {
-        alert(`failed upload: ${err.message}`);
+        alert(`failed upload: ${err}`);
       });
   }
 

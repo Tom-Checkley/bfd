@@ -1,7 +1,7 @@
 <div class="page">
   <div class="page__content">
       <h1 class="page__title">Create a new post</h1>
-      <form class="form form--blog">
+      <form class="form form--blog" (ngSubmit)="createPost()" >
         <div class="form__row">
           <label for="title" class="form__label">Post Title</label>
           <input [(ngModel)]="postTitle" type="text" name="title" id="title" class="form__input" placeholder="Post Title" #psTitle="ngModel" />
@@ -20,7 +20,7 @@
         </div>
         <img *ngIf="imageSrc" [src]="imageSrc" alt="Image Preview" class="form__imgPreview">
         <div class="form__row form__actions">
-          <input type="submit" value="Add Post" class="button"(click)="createPost()" >
+          <input type="submit" value="Add Post" class="button">
           <button class="button button--cancel" (click)="cancel()" >Cancel</button>
         </div>
       </form>
