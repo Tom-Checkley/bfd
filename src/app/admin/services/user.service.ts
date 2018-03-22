@@ -16,13 +16,16 @@ export class UserService implements CanActivate {
 
   constructor( private router: Router) {
   // Initialize Firebase
-    const config = {
-      apiKey: 'AIzaSyBNjlE6xNb6qIvS1ndA4Cztbk5Ag7DKl6o',
-      authDomain: 'bristolfasterdrains.firebaseapp.com',
-      databaseURL: 'https://bristolfasterdrains.firebaseio.com',
-      projectId: 'bristolfasterdrains',
-      storageBucket: 'bristolfasterdrains.appspot.com',
-      messagingSenderId: '978102869678'
+
+      const config = {
+        apiKey: 'AIzaSyBNjlE6xNb6qIvS1ndA4Cztbk5Ag7DKl6o',
+        authDomain: 'bristolfasterdrains.firebaseapp.com',
+        databaseURL: 'https://bristolfasterdrains.firebaseio.com',
+        projectId: 'bristolfasterdrains',
+        storageBucket: 'bristolfasterdrains.appspot.com',
+        messagingSenderId: '978102869678'
+      };
+      firebase.initializeApp(config);
 
       // apiKey: '***',
       // authDomain: '***.firebaseapp.com',
@@ -30,8 +33,8 @@ export class UserService implements CanActivate {
       // projectId: '***',
       // storageBucket: '***.appspot.com',
       // messagingSenderId: '***'
-    };
-    firebase.initializeApp(config);
+    // };
+    // firebase.initializeApp(config);
 
   }
 

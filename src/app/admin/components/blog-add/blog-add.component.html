@@ -1,26 +1,26 @@
 <div class="page">
   <div class="page__content">
       <h1 class="page__title">Create a new post</h1>
-      <form class="form form--blog" (ngSubmit)="createPost()" >
+      <form class="form form--blog">
         <div class="form__row">
-          <label for="title" class="form__label">Post Title</label>
-          <input [(ngModel)]="postTitle" type="text" name="title" id="title" class="form__input" placeholder="Post Title" #psTitle="ngModel" />
+          <label for="postTitle" class="form__label">Post Title</label>
+          <input [(ngModel)]="postTitle" type="text" name="postTitle" id="postTitle" class="form__input" placeholder="Post Title" #psTitle="ngModel" />
         </div>
         <div class="form__row">
-          <label for="location" class="form__label">Post Location</label>
-          <input [(ngModel)]="location" type="text" name="location" id="location" class="form__input" placeholder="Post Location" #psLocation="ngModel" />
+          <label for="postLocation" class="form__label">Post Location</label>
+          <input [(ngModel)]="postLocation" type="text" name="postLocation" id="postLocation" class="form__input" placeholder="Post Location" #psLocation="ngModel" />
         </div>
         <div class="form__row">
-          <label for="content" class="form__label">Post Content</label>
-          <textarea class="form__input" [(ngModel)]="content" name="content" id="content" rows="10" placeholder="Content" #psContent="ngModel"></textarea>
+          <label for="postContent" class="form__label">Post Content</label>
+          <textarea class="form__input" [(ngModel)]="postContent" name="postContent" id="postContent" rows="10" placeholder="Content" #psContent="ngModel"></textarea>
         </div>
         <div class="form__row">
-          <label for="image" class="form__label--input button">Select Image</label>
-          <input type="file" name="image" id="image" class="form__file" (change)="fileLoad($event)" >
+          <label for="postImage" class="form__label--input button">Select Image</label>
+          <input type="file" name="postImage" id="postImage" class="form__file" (change)="fileLoad($event)" >
         </div>
         <img *ngIf="imageSrc" [src]="imageSrc" alt="Image Preview" class="form__imgPreview">
         <div class="form__row form__actions">
-          <input type="submit" value="Add Post" class="button">
+          <input (click)="addPost()"  value="Add Post" class="button">
           <button class="button button--cancel" (click)="cancel()" >Cancel</button>
         </div>
       </form>

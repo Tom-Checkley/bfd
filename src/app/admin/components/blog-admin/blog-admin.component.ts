@@ -46,26 +46,26 @@ export class BlogAdminComponent implements OnInit {
       });
   }
 
-editPost(thePost: Blog) {
-  this.singlePost = thePost;
-  this.formDisplay = false;
-}
-
-cancelEdit() {
-  this.formDisplay = true;
-}
-
-updatePost(single: Blog) {
-  this.blogAdminService.editPost(single);
-  this.formDisplay = true;
-}
-
-deletePost(single: Blog) {
-const verify = confirm(`Are you sure you want to delete this post?`);
-  if (verify) {
-    this.blogAdminService.deletePost(single);
-    this.router.navigate(['/admin/']);
+  editPost(thePost: Blog) {
+    this.singlePost = thePost;
+    this.formDisplay = false;
   }
-}
+
+  cancelEdit() {
+    this.formDisplay = true;
+  }
+
+  updatePost(single: Blog) {
+    this.blogAdminService.editPost(single);
+    this.formDisplay = true;
+  }
+
+  deletePost(single: Blog) {
+  const verify = confirm(`Are you sure you want to delete this post?`);
+    if (verify) {
+      this.blogAdminService.deletePost(single);
+      this.router.navigate(['/admin/']);
+    }
+  }
 
 }

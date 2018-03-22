@@ -1,8 +1,9 @@
 export class Blog {
   constructor(
-    public title: string,
-    public content: string,
-    public location: string,
+    public postTitle: string,
+    public postContent: string,
+    public postLocation: string,
+    public posted,
     public imgTitle: string,
     public img?: any,
     public id?: string

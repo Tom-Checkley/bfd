@@ -13,9 +13,11 @@ export class BlogAddComponent {
   imgTitle: string;
   imageSrc: string;
   postTitle: string;
-  content: string;
-  location: string;
+  postContent: string;
+  postLocation: string;
+  posted;
   post: Blog;
+  id: any;
 
   constructor(private blogAdminService: BlogAdminService, private router: Router) { }
 
@@ -30,19 +32,18 @@ export class BlogAddComponent {
     };
   }
 
-  createPost() {
-    console.log('createpost');
+  addPost() {
+    this.posted = Date.now();
     this.post = new Blog (
       this.postTitle,
-      this.content,
-      this.location,
+      this.postContent,
+      this.postLocation,
+      this.posted,
       this.imgTitle,
-      this.imageSrc.substring(23)
+      this.imageSrc.substring(23),
+      this.id
     );
-    console.log(this.post);
     this.blogAdminService.createPost(this.post);
-    console.log(this.post);
-
     // Add flash message;
 
     this.router.navigate(['/blog-admin']);
