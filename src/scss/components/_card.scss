@@ -1,27 +1,22 @@
-// PAGE
+// TEMPLATE
 ///////////////////////////
 
 // Variables
 ///////////////////////////
 
-$Page-MinHeight:		100vh;
-$Page-Padding:			$Type-LineHeight;
+
 
 
 // Main
 ///////////////////////////
 
-.page {
-	height: $Page-MinHeight;
-	// display: flex;
+.card {
+	
 }
 
 // Elements
 ///////////////////////////
 
-.page__content {
-	@include padding($Page-Padding);
-}
 
 // Variants
 ///////////////////////////

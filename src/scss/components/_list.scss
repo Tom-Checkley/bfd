@@ -25,6 +25,18 @@
 	}
 }
 
+.list--services {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	.list__item {
+		height: 50%;
+		width:33.33%;
+		float: left;
+	}
+}
+
 
 
 // Media Queries
